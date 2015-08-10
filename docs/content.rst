@@ -65,6 +65,7 @@ Metadata syntax for Markdown posts should follow this pattern::
     Slug: my-super-post
     Authors: Alexis Metaireau, Conan Doyle
     Summary: Short version for index and feeds
+    Is_Evergreen: False
 
     This is the content of my super blog post.
 
@@ -85,6 +86,7 @@ interprets the HTML in a very straightforward manner, reading metadata from
             <meta name="category" content="yeah" />
             <meta name="authors" content="Alexis Métaireau, Conan Doyle" />
             <meta name="summary" content="Short version for index and feeds" />
+            <meta name="is_evergreen" content="False" />
         </head>
         <body>
             This is the content of my super blog post.
@@ -121,6 +123,8 @@ when you set ``modified`` to the current date after you modified your article.
 
 ``authors`` is a comma-separated list of article authors. If there's only one author you
 can use ``author`` field.
+
+``is_evergreen`` identifies whether this article is evegreen.  If not, themes can choose not to display creation and edit dates.
 
 If you do not explicitly specify summary metadata for a given post, the
 ``SUMMARY_MAX_LENGTH`` setting can be used to specify how many words from the
